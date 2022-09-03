@@ -11,5 +11,5 @@ prompt=input('What is The Topic You Want Information About: ')
 articles=gn.search(prompt)
 
 for item in articles['entries']:
-    vs = analyzer.polarity_scores(item)
-    print("{:-<65} {}".format(item, str(vs)))
+    print(item['title'])
+    print (analyzer.polarity_scores(str(item['title'])))
