@@ -12,4 +12,5 @@ articles=gn.search(prompt)
 
 for item in articles['entries']:
     print(item['title'])
+    print(item['link'])
     print (analyzer.polarity_scores(str(item['title'])))
